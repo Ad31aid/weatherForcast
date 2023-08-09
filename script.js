@@ -29,6 +29,12 @@ function btnPress(){
         enterUserInput()   
         let cityName = document.getElementById('cityName')
         cityName.innerHTML = userInput.toUpperCase()
+        let searchHistoryContainer = document.querySelector('#searchHistory')
+        console.log(searchHistory)
+        searchHistory.forEach((element)=>{
+                let box = `<li class="list-group-item">${element}</li>`
+                searchHistoryContainer.innerHTML = box
+        })
 }
 
 let listOfCards = []
